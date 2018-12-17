@@ -17,11 +17,9 @@ public class AddPlayerPacket extends PEPacket {
 
     public UUID uuid;
     public String username;
-    public String thirdpartyName;
-    public int platformID = 0;
+    public String platformChatId = "";
     public long eid;
     public long rtid;
-    public String platformChatID = "";
     public Vector3F position;
     public Vector3F motion;
     public float pitch;
@@ -44,11 +42,9 @@ public class AddPlayerPacket extends PEPacket {
     public void encodePayload() {
         putUUID(uuid);
         putString(username);
-        putString(thirdpartyName != null ? thirdpartyName : username);
-        putVarInt(platformID);
         putVarLong(eid);
         putUnsignedVarLong(rtid);
-        putString(platformChatID);
+        putString(platformChatId);
         putVector3F(position);
         putVector3F(motion);
         putLFloat(pitch);

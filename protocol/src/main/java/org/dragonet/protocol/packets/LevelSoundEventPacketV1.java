@@ -6,7 +6,7 @@ import org.dragonet.protocol.ProtocolInfo;
 
 import java.util.Arrays;
 
-public class LevelSoundEventPacket extends PEPacket {
+public class LevelSoundEventPacketV1 extends PEPacket {
 
     public Sound sound;
     public Vector3F position;
@@ -17,7 +17,7 @@ public class LevelSoundEventPacket extends PEPacket {
 
     @Override
     public int pid() {
-        return ProtocolInfo.LEVEL_SOUND_EVENT_PACKET;
+        return ProtocolInfo.LEVEL_SOUND_EVENT_PACKET_V1;
     }
 
     @Override

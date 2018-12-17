@@ -99,12 +99,12 @@ public class TestCommand extends Command {
 
             int id = Integer.parseInt(args[1]);
 
-            LevelSoundEventPacket pk = new LevelSoundEventPacket();
+            LevelSoundEventPacketV1 pk = new LevelSoundEventPacketV1();
 
             CachedEntity self = player.getEntityCache().getClientEntity();
 
             pk.position = new Vector3F((float) self.x, (float) self.y, (float) self.z);
-            pk.sound = LevelSoundEventPacket.Sound.fromID(id);
+            pk.sound = LevelSoundEventPacketV1.Sound.fromID(id);
 
             player.sendPacket(pk);
             player.sendChat("\u00a7bSound ID " + pk.sound.soundID + " (" + pk.sound.name() + ") sent");

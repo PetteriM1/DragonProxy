@@ -54,11 +54,14 @@ public class StartGamePacket extends PEPacket {
     public boolean hasLockedBehaviorPack;
     public boolean hasLockedResourcePack;
     public boolean isFromLockedWorldTemplate;
+    public boolean isUsingMsaGamertagsOnly = false;
+    public boolean isFromWorldTemplate = false;
+    public boolean isWorldTemplateOptionLocked = false;
 
     public String levelId;
     public String worldName;
     public String premiumWorldTemplateId;
-    public boolean unknownBool;
+    public boolean isTrial;
     public long currentTick;
 
     public int enchantmentSeed;
@@ -117,11 +120,14 @@ public class StartGamePacket extends PEPacket {
         putBoolean(hasLockedBehaviorPack);
         putBoolean(hasLockedResourcePack);
         putBoolean(isFromLockedWorldTemplate);
+        putBoolean(isUsingMsaGamertagsOnly);
+        putBoolean(isFromWorldTemplate);
+        putBoolean(isWorldTemplateOptionLocked);
 
         putString(levelId);
         putString(worldName);
         putString(premiumWorldTemplateId);
-        putBoolean(unknownBool);
+        putBoolean(isTrial);
         putLLong(currentTick);
         putVarInt(enchantmentSeed);
 
@@ -174,7 +180,7 @@ public class StartGamePacket extends PEPacket {
         levelId = getString();
         worldName = getString();
         premiumWorldTemplateId = getString();
-        unknownBool = getBoolean();
+        isTrial = getBoolean();
         currentTick = getLLong();
 
         enchantmentSeed = getVarInt();

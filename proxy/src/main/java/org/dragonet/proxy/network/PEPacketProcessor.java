@@ -20,7 +20,6 @@ import java.util.Deque;
 
 import com.github.steveice10.packetlib.packet.Packet;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonParseException;
 import org.dragonet.common.utilities.JsonUtil;
 import java.net.InetSocketAddress;
 import java.net.Proxy;

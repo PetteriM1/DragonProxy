@@ -37,6 +37,7 @@ import org.dragonet.proxy.network.cache.JukeboxCache;
 import org.dragonet.proxy.network.cache.WindowCache;
 import org.dragonet.protocol.PEPacket;
 import org.dragonet.protocol.ProtocolInfo;
+import org.dragonet.protocol.packets.AvailableEntityIdentifiersPacket;
 import org.dragonet.protocol.packets.DisconnectPacket;
 import org.dragonet.protocol.packets.FullChunkDataPacket;
 import org.dragonet.protocol.packets.LoginPacket;
@@ -411,6 +412,8 @@ public class UpstreamSession {
             PlayStatusPacket pkStat = new PlayStatusPacket();
             pkStat.status = PlayStatusPacket.PLAYER_SPAWN;
             sendPacket(pkStat, true);
+
+            sendPacket(new AvailableEntityIdentifiersPacket());
 
             sendChat(proxy.getLang().get(Lang.MESSAGE_LOGIN_PROMPT));
         } else if (proxy.getAuthMode().equals("cls")) {

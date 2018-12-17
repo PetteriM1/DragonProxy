@@ -12,8 +12,6 @@
  */
 package org.dragonet.proxy.network;
 
-import co.aikar.timings.Timing;
-import co.aikar.timings.Timings;
 import com.github.steveice10.mc.protocol.packet.ingame.server.*;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.*;
 import com.github.steveice10.mc.protocol.packet.ingame.server.entity.player.ServerPlayerPositionRotationPacket;
@@ -124,7 +122,7 @@ public final class PacketTranslatorRegister {
      */
     static {
         // Map
-        PE_TO_PC_TRANSLATOR.put(LevelSoundEventPacket.class, new PESoundEventPacketTranslator());
+        PE_TO_PC_TRANSLATOR.put(LevelSoundEventPacketV1.class, new PESoundEventPacketTranslator());
         PE_TO_PC_TRANSLATOR.put(RequestChunkRadiusPacket.class, new PERequestChunkRadiusPacketTranslator());
 
         // Chat

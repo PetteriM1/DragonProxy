@@ -8,6 +8,8 @@ import org.dragonet.protocol.ProtocolInfo;
  */
 public class ResourcePackStackPacket extends PEPacket {
 
+    public boolean isExperimental = false;
+
     @Override
     public int pid() {
         return ProtocolInfo.RESOURCE_PACK_STACK_PACKET;
@@ -18,6 +20,7 @@ public class ResourcePackStackPacket extends PEPacket {
         putBoolean(false);
         putUnsignedVarInt(0);
         putUnsignedVarInt(0);
+        putBoolean(isExperimental);
     }
 
     @Override

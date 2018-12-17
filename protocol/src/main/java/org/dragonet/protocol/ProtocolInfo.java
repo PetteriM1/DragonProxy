@@ -44,7 +44,7 @@ public class ProtocolInfo {
     public static final byte UPDATE_BLOCK_PACKET = (byte) 0x15;
     public static final byte ADD_PAINTING_PACKET = (byte) 0x16;
     public static final byte EXPLODE_PACKET = (byte) 0x17;
-    public static final byte LEVEL_SOUND_EVENT_PACKET = (byte) 0x18;
+    public static final byte LEVEL_SOUND_EVENT_PACKET_V1 = (byte) 0x18;
     public static final byte LEVEL_EVENT_PACKET = (byte) 0x19;
     public static final byte BLOCK_EVENT_PACKET = (byte) 0x1a;
     public static final byte ENTITY_EVENT_PACKET = (byte) 0x1b;
@@ -136,5 +136,11 @@ public class ProtocolInfo {
     public static final byte SET_LOCAL_PLAYER_AS_INITIALIZED_PACKET = 0x71;
     public static final byte UPDATE_SOFT_ENUM_PACKET = 0x72;
     public static final byte NETWORK_STACK_LATENCY_PACKET = 0x73;
+    public static final byte SCRIPT_CUSTOM_EVENT_PACKET = 0x75;
+    public static final byte SPAWN_PARTICLE_EFFECT_PACKET = 0x76;
+    public static final byte AVAILABLE_ENTITY_IDENTIFIERS_PACKET = 0x77;
+    public static final byte LEVEL_SOUND_EVENT_PACKET = 0x78;
+    public static final byte NETWORK_CHUNK_PUBLISHER_UPDATE_PACKET = 0x79;
+    public static final byte BIOME_DEFINITION_LIST_PACKET = 0x7a;
     public static final byte BATCH_PACKET = (byte) 0xff;
 }

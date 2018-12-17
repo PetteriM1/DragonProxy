@@ -21,14 +21,14 @@ import org.dragonet.proxy.DragonProxy;
 import org.dragonet.proxy.network.UpstreamSession;
 import org.dragonet.proxy.network.translator.IPCPacketTranslator;
 import org.dragonet.protocol.PEPacket;
-import org.dragonet.protocol.packets.LevelSoundEventPacket;
+import org.dragonet.protocol.packets.LevelSoundEventPacketV1;
 import org.dragonet.protocol.packets.PlaySoundPacket;
 
 
 public class PCSoundEventPacketTranslator implements IPCPacketTranslator<ServerPlayBuiltinSoundPacket> {
 
     public PEPacket[] translate(UpstreamSession session, ServerPlayBuiltinSoundPacket packet) {
-    	LevelSoundEventPacket pk = new LevelSoundEventPacket();
+    	LevelSoundEventPacketV1 pk = new LevelSoundEventPacketV1();
 
         //System.out.println("BuiltIn Sound packet: " + packet.getSound().name());
 
@@ -37,348 +37,348 @@ public class PCSoundEventPacketTranslator implements IPCPacketTranslator<ServerP
         switch (packet.getSound()) {
 
             case BLOCK_CHEST_OPEN:
-                pk.sound = LevelSoundEventPacket.Sound.CHEST_OPEN;
+                pk.sound = LevelSoundEventPacketV1.Sound.CHEST_OPEN;
                 break;
             case BLOCK_CHEST_CLOSE:
-                pk.sound = LevelSoundEventPacket.Sound.CHEST_CLOSED;
+                pk.sound = LevelSoundEventPacketV1.Sound.CHEST_CLOSED;
                 break;
             case BLOCK_SHULKER_BOX_OPEN:
-                pk.sound = LevelSoundEventPacket.Sound.SHULKER_BOX_OPEN;
+                pk.sound = LevelSoundEventPacketV1.Sound.SHULKER_BOX_OPEN;
                 break;
             case BLOCK_SHULKER_BOX_CLOSE:
-                pk.sound = LevelSoundEventPacket.Sound.SHULKER_BOX_CLOSE;
+                pk.sound = LevelSoundEventPacketV1.Sound.SHULKER_BOX_CLOSE;
                 break;
             case ENCHANT_THORNS_HIT:
-                pk.sound = LevelSoundEventPacket.Sound.THORNS;
+                pk.sound = LevelSoundEventPacketV1.Sound.THORNS;
                 break;
             case ENTITY_ARROW_SHOOT:
-                pk.sound = LevelSoundEventPacket.Sound.SHOOT;
+                pk.sound = LevelSoundEventPacketV1.Sound.SHOOT;
                 break;
             case ENTITY_ARROW_HIT_PLAYER:
-                pk.sound = LevelSoundEventPacket.Sound.HIT;
+                pk.sound = LevelSoundEventPacketV1.Sound.HIT;
                 break;
             case ENTITY_ARROW_HIT:
-                pk.sound = LevelSoundEventPacket.Sound.BOW_HIT;
+                pk.sound = LevelSoundEventPacketV1.Sound.BOW_HIT;
                 break;
             case ENTITY_GENERIC_EXTINGUISH_FIRE:
-            	pk.sound = LevelSoundEventPacket.Sound.FIZZ;
+            	pk.sound = LevelSoundEventPacketV1.Sound.FIZZ;
                 break;
             case BLOCK_FIRE_EXTINGUISH:
-                pk.sound = LevelSoundEventPacket.Sound.EXTINGUISH_FIRE;
+                pk.sound = LevelSoundEventPacketV1.Sound.EXTINGUISH_FIRE;
                 break;
             case ENTITY_CAT_PURR:
-                pk.sound = LevelSoundEventPacket.Sound.PURR;
+                pk.sound = LevelSoundEventPacketV1.Sound.PURR;
                 break;
             case ENTITY_CAT_PURREOW:
-                pk.sound = LevelSoundEventPacket.Sound.PURREOW;
+                pk.sound = LevelSoundEventPacketV1.Sound.PURREOW;
                 break;
             case ENTITY_HORSE_GALLOP:
-                pk.sound = LevelSoundEventPacket.Sound.GALLOP;
+                pk.sound = LevelSoundEventPacketV1.Sound.GALLOP;
                 break;
             case ENTITY_LIGHTNING_THUNDER:
-                pk.sound = LevelSoundEventPacket.Sound.THUNDER;
+                pk.sound = LevelSoundEventPacketV1.Sound.THUNDER;
                 break;
             case ENTITY_PLAYER_LEVELUP:
-                pk.sound = LevelSoundEventPacket.Sound.LEVEL_UP;
+                pk.sound = LevelSoundEventPacketV1.Sound.LEVEL_UP;
                 break;
             case ENTITY_LEASHKNOT_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.LEASHKNOT_PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.LEASHKNOT_PLACE;
                 break;
             case ENTITY_LEASHKNOT_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.LEASHKNOT_BREAK;
+                pk.sound = LevelSoundEventPacketV1.Sound.LEASHKNOT_BREAK;
                 break;
             case ENTITY_SHULKER_OPEN:
-                pk.sound = LevelSoundEventPacket.Sound.SHULKER_OPEN;
+                pk.sound = LevelSoundEventPacketV1.Sound.SHULKER_OPEN;
                 break;
             case ENTITY_SHULKER_CLOSE:
-                pk.sound = LevelSoundEventPacket.Sound.SHULKER_CLOSE;
+                pk.sound = LevelSoundEventPacketV1.Sound.SHULKER_CLOSE;
                 break;
             case ITEM_BOTTLE_FILL_DRAGONBREATH:
-                pk.sound = LevelSoundEventPacket.Sound.BOTTLE_DRAGON_BREATH;
+                pk.sound = LevelSoundEventPacketV1.Sound.BOTTLE_DRAGON_BREATH;
                 break;
             case ITEM_BUCKET_FILL_LAVA:
-                pk.sound = LevelSoundEventPacket.Sound.BUCKET_FILL_LAVA;
+                pk.sound = LevelSoundEventPacketV1.Sound.BUCKET_FILL_LAVA;
                 break;
             case ITEM_BUCKET_EMPTY_LAVA:
-                pk.sound = LevelSoundEventPacket.Sound.BUCKET_EMPTY_LAVA;
+                pk.sound = LevelSoundEventPacketV1.Sound.BUCKET_EMPTY_LAVA;
                 break;
             case ITEM_BUCKET_FILL:
-                pk.sound = LevelSoundEventPacket.Sound.BUCKET_FILL_WATER;
+                pk.sound = LevelSoundEventPacketV1.Sound.BUCKET_FILL_WATER;
                 break;
             case ITEM_BUCKET_EMPTY:
-                pk.sound = LevelSoundEventPacket.Sound.BUCKET_EMPTY_WATER;
+                pk.sound = LevelSoundEventPacketV1.Sound.BUCKET_EMPTY_WATER;
                 break;
             case RECORD_11:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_11;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_11;
                 break;
             case RECORD_13:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_13;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_13;
                 break;
             case RECORD_BLOCKS:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_BLOCKS;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_BLOCKS;
                 break;
             case RECORD_CAT:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_CAT;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_CAT;
                 break;
             case RECORD_CHIRP:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_CHIRP;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_CHIRP;
                 break;
             case RECORD_FAR:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_FAR;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_FAR;
                 break;
             case RECORD_MALL:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_MALL;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_MALL;
                 break;
             case RECORD_MELLOHI:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_MELLOHI;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_MELLOHI;
                 break;
             case RECORD_STAL:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_STAL;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_STAL;
                 break;
             case RECORD_STRAD:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_STRAD;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_STRAD;
                 break;
             case RECORD_WAIT:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_WAIT;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_WAIT;
                 break;
             case RECORD_WARD:
-                pk.sound = LevelSoundEventPacket.Sound.RECORD_WARD;
+                pk.sound = LevelSoundEventPacketV1.Sound.RECORD_WARD;
                 break;
             case ENTITY_ZOMBIE_VILLAGER_CONVERTED:
-                pk.sound = LevelSoundEventPacket.Sound.UNFECT;
+                pk.sound = LevelSoundEventPacketV1.Sound.UNFECT;
                 break;
             case ENTITY_ZOMBIE_VILLAGER_CURE:
-                pk.sound = LevelSoundEventPacket.Sound.REMEDY;
+                pk.sound = LevelSoundEventPacketV1.Sound.REMEDY;
                 break;
             case ENTITY_SHEEP_SHEAR:
-            	pk.sound = LevelSoundEventPacket.Sound.SHEAR;
+            	pk.sound = LevelSoundEventPacketV1.Sound.SHEAR;
                 break;
             case ENTITY_MOOSHROOM_SHEAR:
-                pk.sound = LevelSoundEventPacket.Sound.SHEAR;
+                pk.sound = LevelSoundEventPacketV1.Sound.SHEAR;
                 break;
             // Break sounds need test
             case BLOCK_GRASS_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(2);
                 break;
             case BLOCK_ANVIL_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(145);
                 break;
             case BLOCK_GLASS_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(20);
                 break;
             case BLOCK_CLOTH_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(35);
                 break;
             case BLOCK_GRAVEL_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(13);
                 break;
             case BLOCK_LADDER_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(65);
                 break;
             case BLOCK_METAL_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(1);
                 break;
             case BLOCK_SAND_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(12);
                 break;
             case BLOCK_SLIME_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(165);
                 break;
             case BLOCK_SNOW_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(80);
                 break;
             case BLOCK_STONE_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(1);
                 break;
             case BLOCK_WOOD_BREAK:
-                pk.sound = LevelSoundEventPacket.Sound.BREAK_BLOCK;
+                pk.sound = LevelSoundEventPacketV1.Sound.BREAK_BLOCK;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(5);
                 break;
             // Place sounds need test
             case BLOCK_GRASS_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(2);
                 break;
             case BLOCK_ANVIL_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(145);
                 break;
             case BLOCK_CLOTH_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(35);
                 break;
             case BLOCK_GLASS_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(20);
                 break;
             case BLOCK_GRAVEL_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(13);
                 break;
             case BLOCK_LADDER_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(65);
                 break;
             case BLOCK_METAL_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(1);
                 break;
             case BLOCK_SAND_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(12);
                 break;
             case BLOCK_SLIME_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(165);
                 break;
             case BLOCK_SNOW_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(80);
                 break;
             case BLOCK_STONE_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(1);
                 break;
             case BLOCK_WATERLILY_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(2);
                 break;
             case BLOCK_WOOD_PLACE:
-                pk.sound = LevelSoundEventPacket.Sound.PLACE;
+                pk.sound = LevelSoundEventPacketV1.Sound.PLACE;
                 pk.extraData = GlobalBlockPalette.getOrCreateRuntimeId(5);
                 break;
             case BLOCK_LAVA_POP:
-                pk.sound = LevelSoundEventPacket.Sound.POP;
+                pk.sound = LevelSoundEventPacketV1.Sound.POP;
                 break;
             case BLOCK_PORTAL_TRAVEL:
-                pk.sound = LevelSoundEventPacket.Sound.PORTAL;
+                pk.sound = LevelSoundEventPacketV1.Sound.PORTAL;
                 break;
             case BLOCK_LEVER_CLICK:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_ON;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_ON;
                 break;
             case BLOCK_COMPARATOR_CLICK:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_ON;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_ON;
                 break;
             case BLOCK_STONE_BUTTON_CLICK_ON:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_ON;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_ON;
                 break;
             case BLOCK_METAL_PRESSUREPLATE_CLICK_ON:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_ON;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_ON;
                 break;
             case BLOCK_STONE_PRESSUREPLATE_CLICK_ON:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_ON;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_ON;
                 break;
             case BLOCK_TRIPWIRE_CLICK_ON:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_ON;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_ON;
                 break;
             case BLOCK_WOOD_BUTTON_CLICK_ON:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_ON;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_ON;
                 break;
             case BLOCK_WOOD_PRESSUREPLATE_CLICK_ON:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_ON;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_ON;
                 break;
             case BLOCK_METAL_PRESSUREPLATE_CLICK_OFF:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_OFF;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_OFF;
                 break;
             case BLOCK_STONE_BUTTON_CLICK_OFF:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_OFF;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_OFF;
                 break;
             case BLOCK_STONE_PRESSUREPLATE_CLICK_OFF:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_OFF;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_OFF;
                 break;
             case BLOCK_TRIPWIRE_CLICK_OFF:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_OFF;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_OFF;
                 break;
             case BLOCK_WOOD_BUTTON_CLICK_OFF:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_OFF;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_OFF;
                 break;
             case BLOCK_WOOD_PRESSUREPLATE_CLICK_OFF:
-                pk.sound = LevelSoundEventPacket.Sound.POWER_OFF;
+                pk.sound = LevelSoundEventPacketV1.Sound.POWER_OFF;
                 break;
             // Notes need test and extradata or send with else packet
             case BLOCK_NOTE_BASEDRUM:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_BASS:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_BELL:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_CHIME:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_FLUTE:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_GUITAR:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_HARP:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_HAT:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_PLING:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_SNARE:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_NOTE_XYLOPHONE:
-                pk.sound = LevelSoundEventPacket.Sound.NOTE;
+                pk.sound = LevelSoundEventPacketV1.Sound.NOTE;
                 break;
             case BLOCK_PISTON_EXTEND:
-                pk.sound = LevelSoundEventPacket.Sound.PISTON_OUT;
+                pk.sound = LevelSoundEventPacketV1.Sound.PISTON_OUT;
                 break;
             case BLOCK_PISTON_CONTRACT:
-                pk.sound = LevelSoundEventPacket.Sound.PISTON_IN;
+                pk.sound = LevelSoundEventPacketV1.Sound.PISTON_IN;
                 break;
             case ENTITY_BOBBER_THROW:
-            	pk.sound = LevelSoundEventPacket.Sound.SPLASH;
+            	pk.sound = LevelSoundEventPacketV1.Sound.SPLASH;
             	break;
             case ENTITY_EGG_THROW:
-            	pk.sound = LevelSoundEventPacket.Sound.THROW;
+            	pk.sound = LevelSoundEventPacketV1.Sound.THROW;
             	break;
         	// Throw need test or else translates
             case ENTITY_ENDERPEARL_THROW:
-                pk.sound = LevelSoundEventPacket.Sound.THROW;
+                pk.sound = LevelSoundEventPacketV1.Sound.THROW;
                 break;
             case ENTITY_EXPERIENCE_BOTTLE_THROW:
-                pk.sound = LevelSoundEventPacket.Sound.THROW;
+                pk.sound = LevelSoundEventPacketV1.Sound.THROW;
                 break;
             case ENTITY_LINGERINGPOTION_THROW:
-                pk.sound = LevelSoundEventPacket.Sound.THROW;
+                pk.sound = LevelSoundEventPacketV1.Sound.THROW;
                 break;
             case ENTITY_SNOWBALL_THROW:
-                pk.sound = LevelSoundEventPacket.Sound.THROW;
+                pk.sound = LevelSoundEventPacketV1.Sound.THROW;
                 break;
             case ENTITY_SPLASH_POTION_THROW:
-                pk.sound = LevelSoundEventPacket.Sound.THROW;
+                pk.sound = LevelSoundEventPacketV1.Sound.THROW;
                 break;
             case ENTITY_WITCH_THROW:
-                pk.sound = LevelSoundEventPacket.Sound.THROW;
+                pk.sound = LevelSoundEventPacketV1.Sound.THROW;
                 break;
             case ITEM_FLINTANDSTEEL_USE:
-                pk.sound = LevelSoundEventPacket.Sound.IGNITE;
+                pk.sound = LevelSoundEventPacketV1.Sound.IGNITE;
                 break;
             case ENTITY_TNT_PRIMED:
-                pk.sound = LevelSoundEventPacket.Sound.EVENT_SOUND_TNT;//Fix
+                pk.sound = LevelSoundEventPacketV1.Sound.EVENT_SOUND_TNT;//Fix
                 break;
             case ENTITY_GENERIC_EXPLODE:
-                pk.sound = LevelSoundEventPacket.Sound.EXPLODE;
+                pk.sound = LevelSoundEventPacketV1.Sound.EXPLODE;
                 break;
             default:
                 break;

@@ -3,7 +3,6 @@ package org.dragonet.protocol.packets;
 import org.dragonet.protocol.PEPacket;
 import org.dragonet.protocol.ProtocolInfo;
 import org.dragonet.protocol.type.PlayerListEntry;
-import org.dragonet.common.data.entity.Skin;
 
 /**
  * Created on 2017/10/22.
@@ -34,14 +33,12 @@ public class PlayerListPacket extends PEPacket {
                 if (type == TYPE_ADD) {
                     putUnsignedVarLong(e.eid);
                     putString(e.username);
-                    putString(e.thirdPartyName != null ? e.thirdPartyName : e.username); // TODO
-                    putVarInt(e.platform);
-                    this.putSkin(e.skin);
-                    this.putByteArray(e.skin.getCape().getData());
-                    this.putString(e.geometryModel);
-                    this.putByteArray(e.geometryData);
+                    putSkin(e.skin);
+                    putByteArray(e.skin.getCape().getData());
+                    putString(e.geometryModel);
+                    putByteArray(e.geometryData);
                     putString(e.xboxUserId);
-                    putString(e.unk1);
+                    putString(e.platformChatId);
                 }
             }
         } else
@@ -60,11 +57,9 @@ public class PlayerListPacket extends PEPacket {
                 if (type == TYPE_ADD) {
                     entries[i].eid = getVarLong();
                     entries[i].username = getString();
-                    entries[i].thirdPartyName = getString();
-                    entries[i].platform = getVarInt();
                     entries[i].skin = getSkin();
                     entries[i].xboxUserId = getString();
-                    entries[i].unk1 = getString();
+                    entries[i].platformChatId = getString();
                 }
             }
     }

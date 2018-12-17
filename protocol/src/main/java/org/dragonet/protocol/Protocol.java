@@ -54,7 +54,7 @@ public final class Protocol {
         packets.put(SET_PLAYER_GAME_TYPE_PACKET, SetPlayerGameTypePacket.class);
         packets.put(ADVENTURE_SETTINGS_PACKET, AdventureSettingsPacket.class);
         packets.put(ANIMATE_PACKET, AnimatePacket.class);
-        packets.put(LEVEL_SOUND_EVENT_PACKET, LevelSoundEventPacket.class);
+        packets.put(LEVEL_SOUND_EVENT_PACKET_V1, LevelSoundEventPacketV1.class);
         packets.put(BLOCK_PICK_REQUEST_PACKET, BlockPickRequestPacket.class);
         packets.put(SET_SPAWN_POSITION_PACKET, SetSpawnPositionPacket.class);
         packets.put(LEVEL_EVENT_PACKET, LevelEventPacket.class);
